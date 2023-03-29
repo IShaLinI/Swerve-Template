@@ -1,6 +1,11 @@
 {
   "HALProvider": {
     "Other Devices": {
+      "SPARK MAX [18]": {
+        "header": {
+          "open": true
+        }
+      },
       "navX-Sensor[0]": {
         "header": {
           "open": false
@@ -10,6 +15,7 @@
   },
   "NTProvider": {
     "types": {
+      "/FMSInfo": "FMSInfo",
       "/LiveWindow/Ungrouped/DigitalInput[6]": "Digital Input",
       "/LiveWindow/Ungrouped/DigitalInput[7]": "Digital Input",
       "/LiveWindow/Ungrouped/DigitalInput[8]": "Digital Input",
@@ -26,7 +32,25 @@
       "/LiveWindow/Ungrouped/PIDController[8]": "PIDController",
       "/LiveWindow/Ungrouped/PIDController[9]": "PIDController",
       "/LiveWindow/Ungrouped/Pigeon 2 [88]": "Gyro",
-      "/LiveWindow/Ungrouped/Scheduler": "Scheduler"
+      "/LiveWindow/Ungrouped/Scheduler": "Scheduler",
+      "/Shuffleboard/RobotContainer/m_autoSelector": "String Chooser",
+      "/Shuffleboard/RobotContainer/m_field": "Field2d",
+      "/SmartDashboard/SendableChooser[0]": "String Chooser"
+    },
+    "windows": {
+      "/Shuffleboard/RobotContainer/m_field": {
+        "modules": {
+          "length": 0.5,
+          "width": 0.5
+        },
+        "traj": {
+          "arrows": false,
+          "style": "Line"
+        },
+        "window": {
+          "visible": true
+        }
+      }
     }
   }
 }

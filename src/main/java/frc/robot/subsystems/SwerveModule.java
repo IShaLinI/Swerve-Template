@@ -27,7 +27,6 @@ public class SwerveModule extends SubsystemBase implements Loggable{
      * A module's state is measured by a CANCoder for the absolute position, integrated CANEncoder for relative position
      * for both rotation and linear movement
      */
-
     private SwerveModuleState m_desiredState = new SwerveModuleState();
 
     private final CANSparkMax m_driveMotor;
@@ -52,7 +51,8 @@ public class SwerveModule extends SubsystemBase implements Loggable{
     private final SimpleMotorFeedforward m_driveFeedForward = new SimpleMotorFeedforward(
         DRIVE_FF_CONST[0],
         DRIVE_FF_CONST[1],
-        DRIVE_FF_CONST[2]);        
+        DRIVE_FF_CONST[2]
+    );        
 
 
     public SwerveModule( ModuleConstants moduleConstants) {
