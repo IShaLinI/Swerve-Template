@@ -52,7 +52,7 @@ import io.github.oblarg.oblog.annotations.Log;
  * Handles all the odometry and base movement for the chassis
  */
 public class DrivebaseS extends SubsystemBase implements Loggable {
-    private final WPI_Pigeon2 m_pigeon2 = new WPI_Pigeon2(88);
+    private final WPI_Pigeon2 m_pigeon2 = new WPI_Pigeon2(60);
 
     private final BasePigeonSimCollection m_simPigeon2 = m_pigeon2.getSimCollection();
 
@@ -299,12 +299,6 @@ public class DrivebaseS extends SubsystemBase implements Loggable {
      */
     @Log(methodName = "getRadians")
     public Rotation2d getHeading() {
-        
-        if(RobotBase.isSimulation()){
-            SimDeviceSim gyroSimulation = new SimDeviceSim("CANGyro:Pigeon 2[88]");
-            return Rotation2d.fromDegrees(gyroSimulation.getDouble("yaw").get());
-        }
-
         return m_pigeon2.getRotation2d();
     }
 
